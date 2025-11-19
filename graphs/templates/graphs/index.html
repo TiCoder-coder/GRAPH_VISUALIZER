@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>GRAPH ALGORITHMS - HOME</title>
+
+<style>
+body {
+    background-image: url("{% static 'graphs/images/purple_wave.png' %}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #b9e7ff, #d8afff, #ffcdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 60px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -25px;
+    right: -25px;
+    border-radius: 18px;
+    border: 2px solid rgba(255,255,255,0.25);
+}
+
+.algos-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.algo-btn {
+    padding: 20px 40px;
+    font-size: 22px;
+    background: linear-gradient(135deg, #00f58a, #44ffd4);
+    color: black;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .25s;
+    box-shadow: 0 0 12px rgba(0,255,190,0.6);
+}
+
+.algo-btn:hover {
+    transform: scale(1.10);
+    background: linear-gradient(135deg, #3bff9f, #7affdf);
+    box-shadow: 0 0 20px rgba(0,255,210,0.8);
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>GRAPH ALGORITHMS VISUALIZER</h1>
+
+    <div class="algos-box">
+
+        <button class="algo-btn" onclick="window.location.href='/fleury/'">
+            Thuật toán Fleury
+        </button>
+
+        <button class="algo-btn" onclick="window.location.href='/hierholzer/'">
+            Thuật toán Hierholzer
+        </button>
+
+    </div>
+</div>
+
+</body>
+</html>
